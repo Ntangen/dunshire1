@@ -1,0 +1,85 @@
+body {
+  background-color: #333333;
+}
+
+/*  who the fuck knows
+
+@font-face {
+  font-family: "DOS";
+  src: url("/public/DOS.ttf");
+}
+*/
+
+#input {
+  margin-top: 20px;
+  margin-left: 25%;
+  font-size: 32px;
+  color: #63ff00;
+}
+
+input[type=text] {
+ /* gets rid of input border */ 
+  border: none;
+  -webkit-appearance: none;
+  width: 80%;
+  font-size: 32px;
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+input[type=text]:focus {
+  outline: none;  
+}
+
+input[type=submit]{
+ visibility:hidden;
+}
+
+#signpost {
+  color: green;
+  font-weight: bold;
+  font-size: large;
+}
+
+#outputbox {
+  border: 3px dotted #858585;
+  width: 75%;
+  height: 550px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.output {
+  color:#63ff00;
+  font-size: large;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#enter,#letter {
+  color: #ff6600;
+}
+
+#menu {
+  color: white;
+  font-weight: bold;
+}
+
+#victory {
+  color: blue;
+  font-weight: bold;
+}
+
+#death,#defeat {
+  color: red; 
+  font-weight: bold;
+}
+
+#xp,#gold {
+  color: yellow;
+  font-weight: bold;
+}
