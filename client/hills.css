@@ -2,19 +2,45 @@ body {
   background-color: #333333;
 }
 
-/*  who the fuck knows
+/*
+@font-face {
+  font-family: "asteroid";
+  src: url("asteroid.woff");
+}
+*/ 
 
 @font-face {
-  font-family: "DOS";
-  src: url("/public/DOS.ttf");
+  font-family: 'bitter'; src: url('bitter.ttf');
 }
-*/
+
+#statusbox{
+  margin: auto;
+  width:75%;
+  color:green;
+  font-family: "bitter";
+}
+
+#status{
+  position:absolute;
+  margin-left: 12.5%;
+  left:0px;
+  color:green;
+}
+
+#status2{
+  position:absolute;
+  margin-right: 12.5%;
+  right:0px;
+  color:red;
+}
 
 #input {
   margin-top: 20px;
   margin-left: 25%;
+  font-family: "bitter";
   font-size: 32px;
   color: #63ff00;
+  /* bright green */
 }
 
 input[type=text] {
@@ -25,6 +51,7 @@ input[type=text] {
   font-size: 32px;
   background-color: #333333;
   color: #ffffff;
+  /* white */
   box-shadow: none;
 }
 
@@ -39,20 +66,22 @@ input[type=submit]{
 #signpost {
   color: green;
   font-weight: bold;
-  font-size: large;
+  font-size: medium;
 }
 
 #outputbox {
-  border: 3px dotted #858585;
+  border-bottom: solid green;
   width: 75%;
   height: 550px;
   margin: auto;
   margin-top: 50px;
   padding: 10px;
+  font-family: "bitter", sans-serif;
 }
 
 .output {
   color:#63ff00;
+  /* bright green */
   font-size: large;
 }
 
@@ -62,15 +91,23 @@ ul {
 
 #enter,#letter {
   color: #ff6600;
+  /* bright orange */
 }
 
 #menu {
-  color: white;
+  color: #ffffff;
+  /* white */
+  font-weight: bold;
+}
+
+#quest{
+  color: #00BBF2;
+  /* light blue */
   font-weight: bold;
 }
 
 #victory {
-  color: blue;
+  color: #00BBF2;
   font-weight: bold;
 }
 
