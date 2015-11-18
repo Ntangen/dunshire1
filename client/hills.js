@@ -272,6 +272,16 @@ $('form').submit(function(e){
 			case 6.2:
 				frouter2(userinput);
 				break;
+			case 6.24:
+				gfight("m");
+				break;
+			case 6.25:
+				if (userinput === 'r') gwoodsrun();
+				else gfight();
+				break;
+			case 6.26:
+				gfight("m");
+				break;
 			case 6.3:
 				farm2(userinput);
 				break;
@@ -357,7 +367,7 @@ levelup = function(x){
 		userInfo.level = levels.apprentice;
 		userInfo.hp = levels.apprentice.maxhp;
 	} else if (x===3){
-		userInfo.level = challenger;
+		userInfo.level = levels.challenger;
 		userInfo.hp = levels.challenger.maxhp;
 	}
 }
