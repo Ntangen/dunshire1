@@ -366,6 +366,8 @@ levelup = function(x){
 	if (x===2){
 		userInfo.level = levels.apprentice;
 		userInfo.hp = levels.apprentice.maxhp;
+		userInfo.mission = "";
+		missioncomplete = undefined;
 	} else if (x===3){
 		userInfo.level = levels.challenger;
 		userInfo.hp = levels.challenger.maxhp;
