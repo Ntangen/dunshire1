@@ -285,6 +285,12 @@ $('form').submit(function(e){
 			case 6.3:
 				farm2(userinput);
 				break;
+			case 6.4:
+				farmlevel(2, userinput);
+				break;
+			case 6.6:
+				farm();
+				break;				
 			case 7:
 				magerouter(userinput);
 				break;
