@@ -173,7 +173,7 @@ $('form').submit(function(e){
 				usegear(userinput);
 				break;
 			case 1.251:
-				usegear(userinput, 1);
+				townusegear(userinput);
 				break;
 			case 1.9:
 				townsquare();
