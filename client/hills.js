@@ -154,7 +154,7 @@ $('form').submit(function(e){
 				break;
 			case 1.1:
 				if (userinput === 'r') woodsrun();
-				else woodsfight();
+				else woodsfight(userinput);
 				break;
 			case 1.2:
 				reward();
@@ -167,13 +167,19 @@ $('form').submit(function(e){
 				woodsstart();
 				break;
 			case 1.24:
-				woodsfight("m");
+				woodsfight(0,"m");
 				break;
 			case 1.25:
 				usegear(userinput);
 				break;
 			case 1.251:
 				townusegear(userinput);
+				break;
+			case 1.26:
+				magickturn(userinput);
+				break;
+			case 1.27:
+				woodsfight("m");
 				break;
 			case 1.9:
 				townsquare();
@@ -277,10 +283,10 @@ $('form').submit(function(e){
 				break;
 			case 6.25:
 				if (userinput === 'r') gwoodsrun();
-				else gfight();
+				else gfight(userinput);
 				break;
 			case 6.26:
-				gfight("m");
+				gfight(0,"m");
 				break;
 			case 6.3:
 				farm2(userinput);
@@ -329,6 +335,8 @@ missioncomplete = undefined;
 flag = undefined;
 flag2 = undefined;
 turncounter = undefined;
+shieldflag=false;
+swordflag=false;
 
 newUserStats = {
 	username: "",
@@ -348,10 +356,10 @@ newUserStats = {
 		speed: 0,
 		strength: 0,
 		charisma: 0,
-		cunning: 0
+		myst: 0
 	},
 	mission: undefined,
-	granflag: true 
+	granflag: true
 }
 
 // user FUNCTIONS
@@ -376,6 +384,6 @@ levelup = function(x){
 		missioncomplete = undefined;
 	} else if (x===3){
 		userInfo.level = levels.challenger;
-		userInfo.hp = levels.challenger.maxhp;
+		userInfo.hp = levels.challenger.maxhp
 	}
 }
