@@ -76,6 +76,10 @@ $('form').submit(function(e){
 			case 0.21:
 				login1(userinput);
 				break;
+			case 0.215:
+				if (userinput==="n") enterpath()
+				else login1(userinput);
+				break;
 			case 0.22:
 				newaccount(userinput,1);
 				break;
