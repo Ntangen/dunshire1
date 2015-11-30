@@ -58,10 +58,9 @@ $('form').submit(function(e){
 		console.log("input: " + userinput);
 		console.log("thread: " + thread);
 		statusupdate();
-		if (userinput === "skip") { townsquare() }
-		else if (userinput==="return"){
+		if (userinput==="return"){
 			console.log("return to start");
-			enter();
+			townsquare();
 			}
 		else { switch(thread){
 			case 0:
@@ -111,6 +110,21 @@ $('form').submit(function(e){
 			case 0.72:
 				if (userinput === "q") tavern();
 				else barlines();
+				break;
+			case 0.73:
+				drinknote(userinput,2);
+				break;				
+			case 0.74:
+				senddrink(userinput,0,1);
+				break;
+			case 0.742:
+				senddrink(userinput,0,2);
+				break;
+			case 0.743:
+				senddrink(userinput,0,3);
+				break;
+			case 0.744:
+				senddrink(userinput,0,4);
 				break;
 			case 0.75:
 				minstrel(userinput);
@@ -362,8 +376,7 @@ newUserStats = {
 		charisma: 0,
 		myst: 0
 	},
-	mission: undefined,
-	granflag: true
+	mission: undefined
 }
 
 // user FUNCTIONS
