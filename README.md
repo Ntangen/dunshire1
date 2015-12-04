@@ -16,3 +16,10 @@ Because **[this](https://www.youtube.com/watch?v=XfXfOCIIFcY)** is pretty much m
 * Added gameplay through level 2
 * Send/receive drinks at the Tavern, along with short messages
 * Improved account setup structure
+* Removed autopublish and insecure. Removing the former required some changes, namely adding some Meteor.calls to check some collections serverside for stuff like sending drinks/bank. I'm sure there's a way to just set up the subscriptions differently instead, but this seemed easier.
+
+
+###To do next
+* Adding gameplay levels
+* Several ideas for adding player interaction
+* Extra gameplay threads
