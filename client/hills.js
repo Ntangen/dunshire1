@@ -202,35 +202,45 @@ $('form').submit(function(e){
 			case 1.9:
 				townsquare();
 				break;				
-			case 2:
-				baileyrouter(userinput);
-				break;
-			case 2.1:
-				bstrength(userinput);
-				break;
-			case 2.11:
-				bstrength1(userinput);
-				break;
-			case 2.12:
-				bstrength2(userinput);
-				break;
-			case 2.2:
-				bspeed(userinput);
-				break;
-			case 2.21:
-				bspeed1(userinput);
-				break;
-			case 2.22:
-				bspeed2(userinput);
-				break;
+			// case 2:
+			// 	baileyrouter(userinput);
+			// 	break;
+			// case 2.1:
+			// 	bstrength(userinput);
+			// 	break;
+			// case 2.11:
+			// 	bstrength1(userinput);
+			// 	break;
+			// case 2.12:
+			// 	bstrength2(userinput);
+			// 	break;
+			// case 2.2:
+			// 	bspeed(userinput);
+			// 	break;
+			// case 2.21:
+			// 	bspeed1(userinput);
+			// 	break;
+			// case 2.22:
+			// 	bspeed2(userinput);
+			// 	break;
 			case 2.3:
 				royale("a");
 				break;
 			case 3:
 				rrouter(userinput);
 				break;
-			case 3.5:
-				bailey();
+			case 3.1:
+				rchallenge(userinput);
+				break;
+			case 3.2:
+				rrouter("f");
+				break;
+			case 3.3:
+				if(userinput==="n") royale();
+				else rrounds(1,1);
+				break;
+			case 3.41:
+				rrounds(2,1);
 				break;
 			case 4:
 				bankrouter(userinput);
