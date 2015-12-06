@@ -188,10 +188,14 @@ $('form').submit(function(e){
 				woodsfight(0,"m");
 				break;
 			case 1.25:
-				usegear(userinput);
+				if (x==="") woodsstart();
+				else usegear(userinput);
 				break;
 			case 1.251:
 				townusegear(userinput);
+				break;
+			case 1.252:
+				rusegear(userinput);
 				break;
 			case 1.26:
 				magickturn(userinput);
@@ -226,6 +230,9 @@ $('form').submit(function(e){
 			case 2.3:
 				royale("a");
 				break;
+			case 2.31:
+				royale();
+				break;
 			case 3:
 				rrouter(userinput);
 				break;
@@ -241,6 +248,39 @@ $('form').submit(function(e){
 				break;
 			case 3.41:
 				rrounds(2,1);
+				break;
+			case 3.42:
+				rrounds(3,1);
+				break;
+			case 3.43:
+				rrounds(1,2);
+				break;
+			case 3.44:
+				rrounds(2,2);
+				break;
+			case 3.45:
+				rrounds(3,2);
+				break;
+			case 3.46:
+				rrounds(1,3);
+				break;
+			case 3.47:
+				rrounds(2,3);
+				break;
+			case 3.48:
+				rrounds(3,3);
+				break;				
+			case 3.5:
+				rrouter2(userinput);
+				break;
+			case 3.6:
+				rrouter3(userinput);
+				break;
+			case 3.61:
+				rmagic(userinput);
+				break;
+			case 3.7:
+				rwins(1);
 				break;
 			case 4:
 				bankrouter(userinput);
@@ -381,7 +421,7 @@ newUserStats = {
 	turnsToday: 20,
 	lastPlayed: 0,
 	attributes: {
-		speed: 0,
+		luck: 0,
 		strength: 0,
 		charisma: 0,
 		myst: 0
@@ -412,5 +452,22 @@ levelup = function(x){
 	} else if (x===3){
 		userInfo.level = levels.challenger;
 		userInfo.hp = levels.challenger.maxhp
+	} else if (x===4){
+		userInfo.level = levels.journeyman;
+		userInfo.hp = levels.journeyman.maxhp
+	} else if (x===5){
+		userInfo.level = levels.ranger;
+		userInfo.hp = levels.ranger.maxhp
 	}
+}
+
+lucky = function(){
+	var temp = Math.random();
+	if (userInfo.attributes.luck!=0){
+		temp += userInfo.attributes.luck * 0.1;
+	}
+	console.log("luck var: " + temp);
+	if (temp>=0.5){
+		return true
+	} else return false;
 }
