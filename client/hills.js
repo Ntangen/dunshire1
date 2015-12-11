@@ -405,6 +405,7 @@ flag2 = undefined;
 turncounter = undefined;
 shieldflag=false;
 swordflag=false;
+batpoints=undefined;
 
 newUserStats = {
 	username: "",
@@ -461,13 +462,17 @@ levelup = function(x){
 	}
 }
 
-lucky = function(){
-	var temp = Math.random();
-	if (userInfo.attributes.luck!=0){
-		temp += userInfo.attributes.luck * 0.1;
+fortune = function(x){
+	if (x==="luck"){
+		var temp = Math.random();
+		if (userInfo.attributes.luck!=0){
+			temp += userInfo.attributes.luck * 0.1;
+		}
+		console.log("luck var: " + temp);
+		if (temp>=0.5){
+			return true
+		} else return false;
+	} else {
+		// for adding variables in battle
 	}
-	console.log("luck var: " + temp);
-	if (temp>=0.5){
-		return true
-	} else return false;
 }
