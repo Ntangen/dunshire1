@@ -189,7 +189,7 @@ $('form').submit(function(e){
 				break;
 			case 1.25:
 				if (x==="") woodsstart();
-				else usegear(userinput);
+				else woodsusegear(userinput);
 				break;
 			case 1.251:
 				townusegear(userinput);
@@ -405,7 +405,8 @@ flag2 = undefined;
 turncounter = undefined;
 shieldflag=false;
 swordflag=false;
-batpoints=undefined;
+globalfortune=0;
+batpoints=0;
 
 newUserStats = {
 	username: "",
@@ -474,5 +475,10 @@ fortune = function(x){
 		} else return false;
 	} else {
 		// for adding variables in battle
+		// spirits; berzerk; 
+		var temp = Math.round(Math.random() + (userInfo.attributes.luck * 0.1) + globalfortune);
+		var temp2 = temp + batpoints;
+		console.log("fortune points: " + temp2);
+		return temp2;
 	}
 }
