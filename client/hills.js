@@ -328,6 +328,9 @@ $('form').submit(function(e){
 			case 5.61:
 				abbeyup(2,userinput);
 				break;
+			case 5.7:
+				abbeyheal(userinput);
+				break;
 			case 6:
 				farmrouter(userinput);
 				break;
