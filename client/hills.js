@@ -380,6 +380,40 @@ $('form').submit(function(e){
 			case 7.7:
 				mage();
 				break;
+			case 8:
+				if (userinput==="n") tavern();
+				else tavstalk(1, userinput);
+				break;
+			case 8.1:
+				tavstalkrouter(userinput);
+				break;
+			case 8.2:
+				tavstalkrouter(userinput,2);
+				break;
+			case 8.3:
+				tavstalkrouter(userinput,3);
+				break;
+			case 8.4:
+				stalkrouter(userinput);
+				break;
+			case 8.5:
+				campfight(userinput);
+				break;
+			case 8.6:
+				campfight(userinput,1);
+				break;
+			case 8.7:
+				campmagic(userinput);
+				break;
+			case 8.71:
+				campfight("m");
+				break;
+			case 8.85:
+				campwin();
+				break;				
+			case 8.86:
+				campdead();
+				break;
 			case 86:
 				death();
 				break;			
@@ -410,6 +444,7 @@ shieldflag=false;
 swordflag=false;
 globalfortune=0;
 batpoints=0;
+ghost=undefined;
 
 newUserStats = {
 	username: "",
@@ -476,10 +511,21 @@ fortune = function(x){
 		if (temp>=0.5){
 			return true
 		} else return false;
-	} else {
+	} 
+	else if (x==="char"){
+		var temp = Math.random();
+		if (userInfo.attributes.charisma!=0){
+			temp += userInfo.attributes.charisma * 0.25;
+		}
+		console.log("charisma var: " + temp);
+		if (temp>=0.5){
+			return true
+		} else return false;
+	}
+	else {
 		// for adding variables in battle
 		// spirits; berzerk; 
-		var temp = Math.round(Math.random() + (userInfo.attributes.luck * 0.1) + globalfortune);
+		var temp = Math.round(((Math.random()+1) * userInfo.attributes.luck) + globalfortune);
 		var temp2 = temp + batpoints;
 		console.log("fortune points: " + temp2);
 		return temp2;
