@@ -1,13 +1,17 @@
+
 body {
   background-color: #333333;
 }
 
-/*
-@font-face {
-  font-family: "asteroid";
-  src: url("asteroid.woff");
+#outputbox {
+  border-bottom: solid green;
+  width: 75%;
+  height: 600px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  font-family: "bitter", sans-serif;
 }
-*/ 
 
 @font-face {
   font-family: 'bitter'; src: url('bitter.ttf');
@@ -63,20 +67,20 @@ input[type=submit]{
  visibility:hidden;
 }
 
+#fourcol {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 10px;
+    column-width: 80px
+}
+
 #signpost {
   color: green;
   font-weight: bold;
   font-size: medium;
-}
-
-#outputbox {
-  border-bottom: solid green;
-  width: 75%;
-  height: 550px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 10px;
-  font-family: "bitter", sans-serif;
 }
 
 .output {

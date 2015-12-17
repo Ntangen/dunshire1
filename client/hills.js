@@ -51,6 +51,10 @@ statusupdate = function(x){
 Template.hills.onRendered(function(){
 	this.$('form').focus();
 
+	if (!window.matchMedia("(min-height: 700px)").matches){
+		document.getElementById('1').innerHTML = "<span id=death><strong>Warning! Dunshire is designed for screens greater than 700 pixels in height. If that doesn't suit your device, your experience isn't going to be very good.</span></strong>"
+	}
+
 $('form').submit(function(e){
 		e.preventDefault();
 		var userinput = $('input').val().toLowerCase();
