@@ -449,6 +449,7 @@ swordflag=false;
 globalfortune=0;
 batpoints=0;
 ghost=undefined;
+news=false;
 
 newUserStats = {
 	username: "",
@@ -488,6 +489,7 @@ CheckTurnsToday = function () {
 }
 
 levelup = function(x){
+	Meteor.call("acts",userInfo.username, "level",x);
 	if (x===2){
 		userInfo.level = levels.apprentice;
 		userInfo.hp = levels.apprentice.maxhp;
@@ -497,7 +499,7 @@ levelup = function(x){
 		userInfo.level = levels.challenger;
 		userInfo.hp = levels.challenger.maxhp
 	} else if (x===4){
-		userInfo.level = levels.journeyman;
+		userInfo.level = levels.journeyman;l
 		userInfo.hp = levels.journeyman.maxhp
 	} else if (x===5){
 		userInfo.level = levels.ranger;
