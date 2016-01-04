@@ -95,6 +95,12 @@ $('form').submit(function(e){
 			case 0.23:
 				newaccount(userinput, 2);
 				break;
+			case 0.24:
+				newaccount(userinput, 3);
+				break;
+			case 0.25:
+				newaccount(userinput, 4);
+				break;
 			case 0.3:
 				greeting(userinput);
 				break;
@@ -508,7 +514,7 @@ levelup = function(x){
 		userInfo.level = levels.challenger;
 		userInfo.hp = levels.challenger.maxhp
 	} else if (x===4){
-		userInfo.level = levels.journeyman;l
+		userInfo.level = levels.journeyman;
 		userInfo.hp = levels.journeyman.maxhp
 	} else if (x===5){
 		userInfo.level = levels.ranger;
