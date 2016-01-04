@@ -40,6 +40,12 @@ statusupdate = function(x){
 		if (flag==="fester"){
 			fester();
 			document.getElementById('status2').innerHTML = "HP: " + userInfo.hp + " <span id=defeat>Festering wounds!</span> <><> " + "Gold: " + userInfo.gold;
+		} else if (flag==="drugs"){
+			addict();
+			document.getElementById('status2').innerHTML = "HP: " + userInfo.hp + " <span id=defeat>Addicted!</span> <><> " + "Gold: " + userInfo.gold;			
+		} else if (flag==="booze"){
+			drunk();
+			document.getElementById('status2').innerHTML = "HP: " + userInfo.hp + " <span id=defeat>Drunnnnkk!</span> <><> " + "Gold: " + userInfo.gold;
 		} else {
 		document.getElementById('status2').innerHTML = "HP: " + userInfo.hp + " <><> " + "Gold: " + userInfo.gold;
 		}
@@ -93,8 +99,11 @@ $('form').submit(function(e){
 				greeting(userinput);
 				break;
 			case 0.4:
-				departure(userinput);
-				break;				
+				instruct(userinput);
+				break;
+			case 0.41:
+				greeting("h");
+				break;
 			case 0.5:
 				townsquare(userinput);
 				break;
@@ -147,17 +156,17 @@ $('form').submit(function(e){
 				purch(userinput, "arm");
 				break;				
 			case 0.82:
-				if (userinput === "b") smithy("a");
+				if (userinput === "b") smithy();
 				else smithconfirm(userinput, "arm");
 				break;
 			case 0.83:
-				smithy("a");
+				smithy();
 				break;
 			case 0.9:
 				alchemyrouter(userinput);
 				break;
 			case 0.905:
-				alchemist("a");
+				alchemist();
 				break;
 			case 0.91:
 				alchconfirm(userinput, "heals");
@@ -531,7 +540,7 @@ fortune = function(x){
 	else {
 		// for adding variables in battle
 		// spirits; berzerk; 
-		var temp = Math.round(((Math.random()+1) * userInfo.attributes.luck) + globalfortune);
+		var temp = Math.round(((Math.random()+1) + userInfo.attributes.luck) + globalfortune);
 		var temp2 = temp + batpoints;
 		console.log("fortune points: " + temp2);
 		return temp2;
