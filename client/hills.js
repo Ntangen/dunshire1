@@ -486,7 +486,7 @@ newUserStats = {
 		charisma: 0,
 		myst: 0
 	},
-	mission: undefined
+	mission: "noob"
 }
 
 // user FUNCTIONS
