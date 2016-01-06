@@ -378,6 +378,9 @@ $('form').submit(function(e){
 			case 6.26:
 				gfight(0,"m");
 				break;
+			case 6.27:
+				gmagick(userinput);
+				break;
 			case 6.3:
 				farm2(userinput);
 				break;
