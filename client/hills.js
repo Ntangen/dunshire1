@@ -29,12 +29,15 @@ statusupdate = function(x){
 	if (thread <0.4){return}
 	if (userInfo.turnsToday < 0){userInfo.turnsToday = 0}
 	if (x==="dead"){
+		// this updates the user's profile on server db
+		Meteor.call('playerUpdate', userInfo.username, userInfo, function(error,result){});
 		document.getElementById('status').innerHTML = "Player: 💀";
 		document.getElementById('status2').innerHTML = "HP: 💀" + " <><> " + "Gold: 0";
 	} else if (x==="reset"){
 		document.getElementById('status').innerHTML = "Player:";
 		document.getElementById('status2').innerHTML = "";
 	} else {
+		// this updates the user's profile on server db
 		Meteor.call('playerUpdate', userInfo.username, userInfo, function(error,result){});
 		document.getElementById('status').innerHTML = "Player: " + userInfo.username;
 		if (flag==="fester"){
