@@ -189,6 +189,33 @@ $('form').submit(function(e){
 			case 0.92:
 				alchconfirm(userinput, "meds");
 				break;
+			case 0.93:
+				alchemyrouter("a1");
+				break;
+			case 0.94:
+				alchemyrouter("a2", userinput);
+				break;
+			case 0.95:
+				alchemyrouter("a3");
+				break;
+			case 0.96:
+				querfight(userinput);
+				break;
+			case 0.97:
+				querfight(0,"q");
+				break;
+			case 0.971:
+				qmagick(userinput);
+				break;
+			case 0.972:
+				qmagick("m");
+				break;
+			case 0.98:
+				quervictory();
+				break;
+			case 0.99:
+				quervictory1();
+				break;
 			case 1:
 				woodsrouter(userinput);
 				break;
@@ -525,6 +552,8 @@ levelup = function(x){
 	} else if (x===5){
 		userInfo.level = levels.ranger;
 		userInfo.hp = levels.ranger.maxhp
+		userInfo.mission="";
+		missioncomplete=undefined;
 	}
 }
 
