@@ -501,6 +501,7 @@ news=false;
 
 newUserStats = {
 	username: "",
+	knownPlayer: true,
 	level: levels.naif,
 	hp: 25,
 	gold: 25,
@@ -509,7 +510,8 @@ newUserStats = {
 		weapon: weapons.start.hands,
 		armor: armor.start.shirt,
 		magic: [],
-		other: []
+		other: [],
+		rubies:0
 	},
 	turnsToday: 20,
 	lastPlayed: 0,
@@ -519,7 +521,8 @@ newUserStats = {
 		charisma: 0,
 		myst: 0
 	},
-	mission: "noob"
+	mission: "noob",
+	userid: ""
 }
 
 // user FUNCTIONS
