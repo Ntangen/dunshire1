@@ -17,6 +17,7 @@ Because [this](https://www.youtube.com/watch?v=XfXfOCIIFcY) is pretty much my wi
 **11/19:**
 * Unifying user profiles for use via Slack or web. Some refactoring involved.
 * Added gameplay through **level 5**
+
 **Earlier:**
 * Improved account setup structure
 * Removed autopublish and insecure. Removing the former required some changes, namely adding some Meteor.calls to check some collections serverside for stuff like sending drinks/bank. I'm sure there's a way to just set up the subscriptions differently instead, but this seemed easier.
