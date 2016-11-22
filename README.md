@@ -17,6 +17,7 @@ Because [this](https://www.youtube.com/watch?v=XfXfOCIIFcY) is pretty much my wi
 **11/19:**
 * Unifying user profiles for use via Slack or web. Some refactoring involved.
 * Added gameplay through **level 5**
+* Squashed bugs
 
 **Earlier:**
 * Improved account setup structure
