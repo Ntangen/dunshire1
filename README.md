@@ -14,12 +14,12 @@ This is very much a WIP. Comments/feedback are [welcome.](http://www.twitter.com
 Because [this](https://www.youtube.com/watch?v=XfXfOCIIFcY) is pretty much my wife's reaction too.
 
 ###Most recent additions
-**11/19:**
-* Unifying user profiles for use via Slack or web. Some refactoring involved.
-* Added gameplay through **level 5**
+**12/20:**
+* User profiles between web and Slack versions are now unified, and both game versions point to the same DB, meaning that sweet, sweet dual-platform Dunquest is almost a reality
 * Squashed bugs
 
 **Earlier:**
+* Added gameplay through **level 5**
 * Improved account setup structure
 * Removed autopublish and insecure. Removing the former required some changes, namely adding some Meteor.calls to check some collections serverside for stuff like sending drinks/bank. I'm sure there's a way to just set up the subscriptions differently instead, but this seemed easier.
 * Added "fortune" gameplay concepts - making day-to-day battles marginally more uncertain, and adding meaning to the user Luck attribute
